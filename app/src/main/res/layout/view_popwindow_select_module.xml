@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="40dp"
+    android:orientation="horizontal"
+    android:background="@drawable/bg_corner_rectangle_lightblue">
+    <TextView
+        android:id="@+id/tv_quiet"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:layout_height="match_parent"
+        android:text="安静模式"/>
+    <View
+        android:layout_width="1dp"
+        android:layout_height="match_parent"
+        android:background="@color/white"/>
+    <TextView
+        android:id="@+id/tv_noise"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:layout_height="match_parent"
+        android:text="噪音模式"/>
+</LinearLayout>

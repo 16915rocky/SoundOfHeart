@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:id="@+id/lt_guide"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="一声和四声"/>
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@mipmap/ic_right_arrow"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="标准模式"/>
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@mipmap/ic_right_arrow"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="安静模式"/>
+    </LinearLayout>
+    <TextView
+        android:id="@+id/tv_hint"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="请仔细聆听所播放的声音,然后选择匹配的字"
+        android:layout_below="@+id/lt_guide"/>
+
+    <LinearLayout
+        android:layout_below="@+id/tv_hint"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+       <LinearLayout
+           android:layout_width="0dp"
+           android:layout_weight="5"
+           android:layout_height="match_parent"
+           android:orientation="vertical">
+           <TextView
+               android:layout_marginTop="10dp"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:text="请点选您听到的声音"
+               android:gravity="center"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+                   <RelativeLayout
+                       android:layout_width="0dp"
+                       android:layout_weight="1"
+                       android:layout_height="match_parent">
+
+                       <ImageView
+                           android:id="@+id/img_sel1"
+                           android:layout_width="100dp"
+                           android:layout_height="100dp"
+                           android:layout_centerHorizontal="true"
+                           android:layout_marginTop="15dp"
+                           android:src="@mipmap/bao1" />
+                       <com.example.xq.soundofheart.widget.TickView
+                           android:id="@+id/tick_view_accent1"
+                           android:layout_width="wrap_content"
+                           android:layout_height="wrap_content"
+                           app:radius="15dp"
+                           android:layout_marginTop="5dp"
+                           android:layout_below="@+id/img_sel1"
+                           android:layout_centerHorizontal="true"
+                           app:check_base_color="@color/colorPrimary"
+                           app:rate="normal" />
+                   </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_weight="1">
+
+                    <ImageView
+                        android:id="@+id/img_sel2"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="15dp"
+                        android:src="@mipmap/bao1"
+                        />
+                    <com.example.xq.soundofheart.widget.TickView
+                        android:id="@+id/tick_view_accent2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:radius="15dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_below="@+id/img_sel2"
+                        android:layout_centerHorizontal="true"
+                        app:check_base_color="@color/colorPrimary"
+                        app:rate="normal" />
+                </RelativeLayout>
+            </LinearLayout>
+           <LinearLayout
+               android:layout_width="match_parent"
+               android:layout_height="50dp"
+               android:gravity="center_horizontal"
+               android:orientation="horizontal">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="问题"/>
+               <LinearLayout
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:orientation="vertical"
+                   android:gravity="center">
+                   <TextView
+                       android:id="@+id/current_question_num"
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:text="(1)"/>
+
+               </LinearLayout>
+               <TextView
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:text="总共25"/>
+
+
+               <TextView
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:text="      所用时间"/>
+               <LinearLayout
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:orientation="vertical"
+                   android:gravity="center">
+                  <Chronometer
+                      android:id="@+id/ct_time"
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:format="%s" />
+
+               </LinearLayout>
+           </LinearLayout>
+       </LinearLayout>
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+          <LinearLayout
+              android:id="@+id/lt_replay"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:gravity="center_horizontal"
+              android:orientation="vertical">
+
+              <ImageView
+                  android:layout_width="35dp"
+                  android:layout_height="35dp"
+                  android:layout_marginTop="5dp"
+                  android:src="@mipmap/replay" />
+              <TextView
+                  android:layout_marginTop="5dp"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:text="重播"/>
+          </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/lt_stop"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+                <ImageView
+                    android:layout_marginTop="5dp"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:src="@mipmap/ic_stop_button"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text="暂停" />
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/lt_sign_out"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center_horizontal">
+                <ImageView
+                    android:layout_marginTop="5dp"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:src="@mipmap/ic_sign_out_btton"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text="退出" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+
+</RelativeLayout>

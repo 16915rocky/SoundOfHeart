@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/tb_find"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/colorPrimary"
+        android:fitsSystemWindows="true"
+        android:gravity="center">
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="心之声训练"
+            android:textColor="@color/white"
+            android:layout_gravity="center"/>
+    </android.support.v7.widget.Toolbar>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:id="@+id/tv_item1"
+            android:layout_width="150dp"
+            android:layout_height="40dp"
+            android:text="一声和四声"
+            android:layout_marginLeft="20dp"
+            android:textColor="@color/white"
+            android:background="@drawable/rect_orange_bg"
+            android:gravity="center"/>
+        <TextView
+            android:layout_width="150dp"
+            android:layout_height="40dp"
+            android:text="一声和三声"
+            android:textColor="@color/white"
+            android:background="@drawable/rect_orange_bg"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"/>
+        <TextView
+            android:layout_width="150dp"
+            android:layout_height="40dp"
+            android:text="一声和二声"
+            android:layout_marginRight="20dp"
+            android:textColor="@color/white"
+            android:background="@drawable/rect_orange_bg"
+            android:layout_alignParentRight="true"
+            android:gravity="center"/>
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:layout_width="150dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="20dp"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:text="二声和四声"
+            android:background="@drawable/rect_orange_bg" />
+        <TextView
+            android:layout_width="150dp"
+            android:layout_height="40dp"
+            android:text="一声和三声"
+            android:textColor="@color/white"
+            android:background="@drawable/rect_orange_bg"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"/>
+        <TextView
+            android:layout_width="150dp"
+            android:layout_height="40dp"
+            android:text="一声和二声"
+            android:layout_marginRight="20dp"
+            android:textColor="@color/white"
+            android:background="@drawable/rect_orange_bg"
+            android:layout_alignParentRight="true"
+            android:gravity="center"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:layout_width="150dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="20dp"
+            android:background="@drawable/rect_orange_bg"
+            android:gravity="center"
+            android:text="总训练"
+            android:textColor="@color/white" />
+
+    </RelativeLayout>
+
+</LinearLayout>

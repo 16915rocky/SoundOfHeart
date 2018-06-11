@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <TextView
+    android:layout_width="110dp"
+    android:layout_height="30dp"
+    android:textColor="@color/white"
+    android:gravity="center"
+    android:layout_alignParentRight="true"
+    android:layout_marginTop="25dp"
+    android:layout_marginRight="25dp"
+    android:background="@color/colorLightBlue"
+    android:text="清除前一次记录"/>
+    <TextView
+        android:layout_width="110dp"
+        android:layout_height="30dp"
+        android:textColor="@color/white"
+        android:gravity="center"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="25dp"
+        android:layout_marginRight="170dp"
+        android:background="@color/colorLightBlue"
+        android:text="清除全部记录"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/background_train_result">
+
+        <com.github.mikephil.charting.charts.LineChart
+            android:id="@+id/lineChart_result"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_centerInParent="true" />
+    </RelativeLayout>
+
+</RelativeLayout>
